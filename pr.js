@@ -20,10 +20,10 @@ function validateForm(event) {
 
     let error = "";
 
-    let namRegex = "^[A-Za-z]+$";
+    let telRegex = "^[A-Za-z]+$";
     let correoregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     let passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/;
-    let cont = 0;
+    let namRegex = "(\\w{2,}(|\\s\\w{2,})+)";
     if (name.length <= 2) {
         error = "Nombre invalido 2 caracteres minimo"
         event.preventDefault();
@@ -42,7 +42,7 @@ function validateForm(event) {
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
-    } else if (telefono.match(namRegex) || telefono.length != 9) {
+    } else if (telefono.match(telRegex) || telefono.length != 9) {
         error = "introduce un numero valido";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
