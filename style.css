@@ -19,6 +19,8 @@ body {
 }
 input{
   width: 45%;
+}#mujer,#hombre{
+  width: 6%;
 }
 form {
   border-radius: 4%;
