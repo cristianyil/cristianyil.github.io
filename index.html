@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formulario" onsubmit="validateForm(event)"
+        action="https://formsubmit.co/b72234132093e17d6ea6b2c7b1401868 " method="POST">
+        <h2>Formulario</h2>
+
+        <br>
+        <label for="nombre" class="ola">Nombre</label>
+
+        <br>
+        <input type="text" id="nombre">
+        <br>
+        <br>
+        <label for="tel">Telefono</label>
+        <br>
+
+        <input type="tel" id="tel">
+        <br>
+        <br>
+        <label for="correo">Correo electronico</label>
+        <br>
+
+        <input type="text" id="correo" name="correo">
+        <br><br>
+        <label for="pass1">Contraseña</label>
+        <br>
+        <input type="password" id="pass1" name="pass1">
+        <br>
+        <br>
+        <label for="pass2">Repite contraseña</label>
+        <br>
+        <input type="password" id="pass2" name="pass2">
+        <br>
+        <br>
+        <input type="radio" id="hombre" name="sexo" value="hombre" />
+        <label for="hombre">Hombre</label>
+
+        <input type="radio" id="mujer" name="sexo" value="mujer" checked="checked" />
+        <label for="mujer">Mujer</label>
+        <br>
+        <br>
+        <label for="pais">Pais</label>
+        <br> <br>
+        <select name="pais" id="pais" required="required">
+            <br>
+            <br>
+
+            <br>
+            <option value="">- seleccione -</option>
+            <br>
+
+            <option value="pais vasco">País Vasco</option>
+            <option value="argelia">argelia</option>
+            <option value="filipina">filipina</option>
+        </select> <br />
+        <br>
+        <label for="ciudad">Ciudad</label>
+        <br>
+        <br>
+        <select name="ciudad" id="ciudad" required="required">
+            <option value="">- seleccione -</option>
+            <option value="la linea">la linea de la concepcion</option>
+            <option value="algeciras">algeciras</option>
+            <option value="los barrios">los barrios</option>
+        </select>
+        <br />
+        <br>
+
+        <label for="fecha" class="propiedad">Fecha de nacimiento</label>
+        <br>
+
+        <input type="date" id="fecha" name="naci" />
+        <br>
+        <br>
+        <input type="submit" class="u" value="submit">
+        <input type="reset" class="d" value="Borrar datos">
+        <br>
+        <br>
+        <div id='errorD'></div>
+        <br> <br><br>
+        <input type="hidden" name="_captcha" value="false">
+    </form>
+
+    <script src="pr.js">
+
+    </script>
+</body>
+
+</html>

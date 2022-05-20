@@ -1,0 +1,38 @@
+html {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(100deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1));
+}
+
+#errorD {
+  padding-bottom: 2%;
+}
+
+form {
+  border-radius: 4%;
+  background-color: white;
+  width: 25%;
+  text-align: center;
+  margin: auto;
+
+}
+
+#errorD {
+
+  color: red;
+
+}
+
+.u,
+.d {
+  width: 25%;
+  height: 60%;
+}
