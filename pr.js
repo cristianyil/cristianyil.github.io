@@ -67,6 +67,12 @@ function validateForm(event) {
         error = "las contraseñas no coinciden";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
+       
+    }
+    else if( naci=="" ){
+        error = "Porfavor introduzca la edad";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
     } else if (naci > fecha) {
         error = "la fecha no puede ser futura";
         document.getElementById("errorD").innerHTML = error;
