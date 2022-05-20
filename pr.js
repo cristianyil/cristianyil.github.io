@@ -1,3 +1,5 @@
+
+
 function validateForm(event) {
     const name = document.forms["formulario"]["nombre"].value;
     const telefono = document.forms["formulario"]["tel"].value;
@@ -5,6 +7,7 @@ function validateForm(event) {
     const co1 = document.forms["formulario"]["pass1"].value;
     const co2 = document.forms["formulario"]["pass2"].value;
     const naci = document.forms["formulario"]["naci"].value;
+    
 
     const syearn = naci.substr(0, 4);
     const sdayn = naci.substr(6, 2);
@@ -99,3 +102,40 @@ function validateForm(event) {
         event.preventDefault();
     }
 }
+
+const formPart1 = document.getElementById("formPart1");
+const formPart2 = document.getElementById("formPart2");
+const formPart3 = document.getElementById("formPart3");
+const formPartCounter = document.getElementById("formPart");
+
+const nextBtn = document.getElementById("nextBtn");
+const backBtn = document.getElementById("backBtn");
+
+nextBtn.addEventListener("click", ()=>{
+    if(formPartCounter.value=="1") {
+        formPartCounter.value="2";
+        backBtn.hidden = false;
+        formPart1.hidden = true;
+        formPart2.hidden = false;
+    } else if(formPartCounter.value=="2"){
+        formPartCounter.value="3";
+        nextBtn.hidden = true;
+        formPart2.hidden = true;
+        formPart3.hidden = false;
+    }
+})
+
+backBtn.addEventListener("click", ()=>{
+    if(formPartCounter.value=="3") {
+        formPartCounter.value="2";
+        nextBtn.hidden = false;
+        formPart3.hidden = true;
+        formPart2.hidden = false;
+    } else if(formPartCounter.value=="2"){
+        formPartCounter.value="1";
+        nextBtn.hidden = false;
+        backBtn.hidden = true;
+        formPart2.hidden = true;
+        formPart1.hidden = false;
+    }
+})

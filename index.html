@@ -14,20 +14,22 @@
     <form id="formulario" onsubmit="validateForm(event)"
         action="https://formsubmit.co/b72234132093e17d6ea6b2c7b1401868 " method="POST">
         <h2>Formulario</h2>
+        <br>
+        <div id="formPart1">
+            <label for="nombre" class="ola">Nombre</label>
 
-        <br>
-        <label for="nombre" class="ola">Nombre</label>
-
-        <br>
-        <input type="text" id="nombre">
-        <br>
-        <br>
-        <label for="tel">Telefono</label>
-        <br>
-
-        <input type="tel" id="tel">
-        <br>
-        <br>
+            <br>
+            <input type="text" id="nombre">
+            <br>
+            <br>
+            <label for="tel">Telefono</label>
+            <br>
+    
+            <input type="tel" id="tel">
+            <br>
+        </div>
+        <div hidden id="formPart2">
+            <br>
         <label for="correo">Correo electronico</label>
         <br>
 
@@ -42,7 +44,9 @@
         <br>
         <input type="password" id="pass2" name="pass2">
         <br>
-        <br>
+        </div>
+        <div hidden id="formPart3">
+            <br>
         <label for="sexo">Sexo</label>
         <br>
         <br>
@@ -86,16 +90,24 @@
         <input type="date" id="fecha" name="naci" />
         <br>
         <br>
-        <input type="submit" class="u" value="submit">
-        <input type="reset" class="d" value="Borrar datos">
+        </div>
+        <div>
+            <br>
+            <br>
+            <input hidden type="submit" class="u" value="submit">
+            <input  hidden type="button" id="backBtn" value="back">
+            <input  type="button" id="nextBtn" value="next">
+            <input type="reset" class="d" value="Borrar datos">
+        </div>
         <br>
         <br>
         <div id='errorD'></div>
         <br> <br><br>
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://cristianyil.github.io/">
-        <input type="hidden" name="_cc" value=" crstnsteam@gmail.com ">
-
+        <input type="hidden" name="_cc" value="crstnsteam@gmail.com ">
+        <input type="hidden" id="formPart" value="1">
+        
     </form>
 
     <script src="pr.js">
