@@ -69,15 +69,7 @@ function validateForm(event) {
         event.preventDefault();
        
     }
-    else if( naci=="" ){
-        error = "Porfavor introduzca la edad";
-        document.getElementById("errorD").innerHTML = error;
-        event.preventDefault();
-    } else if (naci > fecha) {
-        error = "la fecha no puede ser futura";
-        document.getElementById("errorD").innerHTML = error;
-        event.preventDefault();
-    } 
+  
     else if (pais==""){
         error = "pon un pais";
         document.getElementById("errorD").innerHTML = error;
@@ -88,6 +80,15 @@ function validateForm(event) {
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
     }
+    else if( naci=="" ){
+        error = "Porfavor introduzca la edad";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
+    } else if (naci > fecha) {
+        error = "la fecha no puede ser futura";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
+    } 
     else if (year - yearn <= 18) {
         if (year - yearn < 18) {
             error = "No cumple la mayoria de edad";
