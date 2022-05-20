@@ -5,21 +5,20 @@ function validateForm(event) {
     const co1 = document.forms["formulario"]["pass1"].value;
     const co2 = document.forms["formulario"]["pass2"].value;
     const naci = document.forms["formulario"]["naci"].value;
-
+    const pais = document.forms["formulario"]["pais"].value;
+    const ciudad = document.forms["formulario"]["ciudad"].value;
     const syearn = naci.substr(0, 4);
-    const sdayn = naci.substr(6, 2);
+    const sdayn = naci.substr(8, 2);
     const smonthn = naci.substr(5, 2);
     const yearn = parseInt(syearn);
     const monthn = parseInt(smonthn);
     const dayn = parseInt(sdayn);
     var alldate = new Date();
-    var month = alldate.getUTCMonth() + 1;
-    var day = alldate.getDay();
+    var day = alldate.getDate();
     var year = alldate.getFullYear();
+    var month = alldate.getUTCMonth() + 1;
     fecha = year + "/" + month + "/" + day;
-
     let error = "";
-
     let telRegex = "^[A-Za-z]+$";
     let correoregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     let passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/;
@@ -27,7 +26,7 @@ function validateForm(event) {
     if (name.length <= 2) {
         error = "Nombre invalido 2 caracteres minimo"
         event.preventDefault();
-        document.getElementById("errorD").innerHTML = error;
+        document.getElementById("errorD").innerHTML = error  ;
 
 
 
@@ -74,7 +73,18 @@ function validateForm(event) {
         error = "la fecha no puede ser futura";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    } else if (year - yearn <= 18) {
+    } 
+    else if (pais==""){
+        error = "pon un pais";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
+    }
+    else if (ciudad==""){
+        error = "pon un ciuadad";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
+    }
+    else if (year - yearn <= 18) {
         if (year - yearn < 18) {
             error = "No cumple la mayoria de edad2";
             document.getElementById("errorD").innerHTML = error;
