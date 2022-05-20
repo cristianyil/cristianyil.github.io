@@ -5,9 +5,13 @@ html {
   background: linear-gradient(100deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1));
 }
 
+h2 {
+  font-size: 180%;
+}
+
 body {
   height: 100vh;
-
+  font-size: 100%;
   display: flex;
   align-items: center;
   background: rgb(34, 193, 195);
@@ -17,11 +21,16 @@ body {
 #errorD {
   padding-bottom: 2%;
 }
-input{
+
+input {
   width: 45%;
-}#mujer,#hombre{
+}
+
+#mujer,
+#hombre {
   width: 6%;
 }
+
 form {
   border-radius: 4%;
   background-color: white;
@@ -41,4 +50,8 @@ form {
 .d {
   width: 25%;
   height: 60%;
+}
+
+#ciudad {
+  width: 60%;
 }
