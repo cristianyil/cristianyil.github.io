@@ -86,7 +86,7 @@ function validateForm(event) {
     }
     else if (year - yearn <= 18) {
         if (year - yearn < 18) {
-            error = "No cumple la mayoria de edad2";
+            error = "No cumple la mayoria de edad";
             document.getElementById("errorD").innerHTML = error;
             event.preventDefault();
         } else if (monthn <= month) {
