@@ -24,7 +24,7 @@ body {
 }
 
 input {
-  width: 45%;
+  width: 35%;
 }
 
 #mujer,
@@ -56,9 +56,13 @@ form {
 #ciudad,#pais {
   width: 60%;
 }
-@media (max-width: 282px){
-  form{
-    width: 150px;
-  }
+form {
+  width: 30vw;
 }
 
+
+@media only screen and (max-width: 768px) {
+  form {
+    width: 75vw;
+  }
+}
