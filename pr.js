@@ -39,7 +39,7 @@ function validateForm(event) {
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
-    } else if (telefono.match(telRegex) || telefono.length != 9) {
+    } else if (telefono.match(namRegex) || telefono.length != 9) {
         error = "introduce un numero valido";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
