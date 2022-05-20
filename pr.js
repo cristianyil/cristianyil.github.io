@@ -22,13 +22,11 @@ function validateForm(event) {
     let telRegex = "^[A-Za-z]+$";
     let correoregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     let passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/;
-    let namRegex = "(\\w{2,}(|\\s\\w{2,})+)";
+    let namRegex = "(\[A-Za-z]{2,}(|\\s[A-Za-z]{2,})+)";
     if (name.length <= 2) {
         error = "Nombre invalido 2 caracteres minimo"
         event.preventDefault();
-        document.getElementById("errorD").innerHTML = error  ;
-
-
+        document.getElementById("errorD").innerHTML = error;
 
     } else if (name.length > 15) {
         error = "Nombre invalido 15 caracteres minimos"
@@ -73,18 +71,15 @@ function validateForm(event) {
         error = "la fecha no puede ser futura";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    } 
-    else if (pais==""){
+    } else if (pais == "") {
         error = "pon un pais";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    }
-    else if (ciudad==""){
+    } else if (ciudad == "") {
         error = "pon un ciuadad";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    }
-    else if (year - yearn <= 18) {
+    } else if (year - yearn <= 18) {
         if (year - yearn < 18) {
             error = "No cumple la mayoria de edad";
             document.getElementById("errorD").innerHTML = error;
