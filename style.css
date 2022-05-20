@@ -17,7 +17,9 @@ body {
 #errorD {
   padding-bottom: 2%;
 }
-
+input{
+  width: 45%;
+}
 form {
   border-radius: 4%;
   background-color: white;
