@@ -19,17 +19,18 @@ function validateForm(event) {
     var month = alldate.getUTCMonth() + 1;
     fecha = year + "/" + month + "/" + day;
     let error = "";
+ let especil =/^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/
     let namRegex = "^[A-Za-z]+$";
     let correoregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    let passregex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{2,15})";
 
-    if (name.length <= 2) {
+    const password = checkPasswordValidation(co1);
+    if (name.length <= 2) { 
         error = "Nombre invalido 2 caracteres minimo"
         event.preventDefault();
         document.getElementById("errorD").innerHTML = error;
 
     } else if (name.length > 15) {
-        error = "Nombre invalido 15 caracteres minimos"
+        error = "Nombre invalido 15 caracteres maximo"
         event.preventDefault();
         document.getElementById("errorD").innerHTML = error;
 
@@ -39,21 +40,26 @@ function validateForm(event) {
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
-    } else if (telefono.match(namRegex) || telefono.length != 9) {
+    } else if ( telefono.length != 9) {
         error = "introduce un numero valido";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
 
+    }
+    else if(telefono.match(namRegex)||telefono.match(especil)){
+        error = "introduce un numero valido";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
     } else if (!correo.match(correoregex)) {
 
         error = "correo invalido";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
-    }else if (!co1.match(passregex)) {
-        error = "Debe incluir almenos una mayuscula,una minuscula y un caracater ";
-        document.getElementById("errorD").innerHTML = error;
+    }  else if (password != null) {
+        
+        document.getElementById("errorD").innerHTML = password;
         event.preventDefault();
     } else if (co1 != co2) {
         error = "las contraseñas no coinciden";
@@ -117,3 +123,45 @@ function validateForm(event) {
         }
     }
 }
+
+
+function checkPasswordValidation(value) {
+    const co1 = document.forms["formulario"]["pass1"].value;
+    const isWhitespace = /^(?=.*\s)/;
+    if (co1.match(isWhitespace)) {
+      return "Password must not contain Whitespaces.";
+    }
+
+
+    const isContainsUppercase = /^(?=.*[A-Z])/;
+    if (!value.match(isContainsUppercase)) {
+      return "Password must have at least one Uppercase Character.";
+    }
+
+
+    const isContainsLowercase = /^(?=.*[a-z])/;
+    if (!value.match(isContainsLowercase)) {
+      return "Password must have at least one Lowercase Character.";
+    }
+
+
+    const isContainsNumber = /^(?=.*[0-9])/;
+    if (!value.match(isContainsNumber)) {
+      return "Password must contain at least one Digit.";
+    }
+
+
+    const isContainsSymbol =
+      /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/;
+    if (!value.match(isContainsSymbol)) {
+      return "Password must contain at least one Special Symbol.";
+    }
+
+
+    const isValidLength = /^.{4,15}$/;
+    if (!value.match(isValidLength)) {
+      return "Password must be 10-16 Characters Long.";
+    }
+
+}
+
