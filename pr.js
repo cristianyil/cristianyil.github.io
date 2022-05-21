@@ -103,10 +103,13 @@ function validateForm(event) {
             document.getElementById("errorD").innerHTML = error;
             event.preventDefault();
         }
-    } else if (year - yearn <= 66) {
-        if (year - yearn < 66) {
 
-        } else if (monthn >= month) {
+    } else if (year - yearn > 66) {
+        error = "No puede tener mas de 65 años";
+        document.getElementById("errorD").innerHTML = error;
+        event.preventDefault();
+    } else if (year - yearn == 66) {
+        if (monthn >= month) {
             if (monthn == month) {
                 if (dayn <= day) {
                     error = "No puede tener mas de 65 años";
@@ -114,7 +117,7 @@ function validateForm(event) {
                     event.preventDefault();
                 }
 
-            } 
+            }
         } else {
             error = "No puede tener mas de 65 años";
             document.getElementById("errorD").innerHTML = error;
