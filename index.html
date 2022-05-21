@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,11 @@
 
 <body>
     <form id="formulario" onsubmit="validateForm(event)"
-     action="https://formsubmit.co/b72234132093e17d6ea6b2c7b1401868 " method="POST">
+     action="https://formsubmit.co/b72234132093e17d6ea6b2c7b1401868" method="POST">
         <h2>Formulario</h2>
 
         <br>
-        <label for="nombre" class="ola">Nombre</label>
+        <label for="nombre">Nombre</label>
 
         <br>
         <input type="text" id="nombre">
@@ -43,7 +43,7 @@
         <input type="password" id="pass2" name="pass2">
         <br>
         <br>
-        <label for="sexo">Sexo</label>
+        <label for="sexo" id="sexo">Sexo</label>
         <br>
         <br>
         <input type="radio" id="hombre" name="sexo" value="hombre" />
@@ -98,9 +98,8 @@
 
     </form>
 
-    <script src="pr.js">
-
-    </script>
+    <script src="script.js"></script>
+    <script src="unitTest.js"></script>
 </body>
 
 </html>
