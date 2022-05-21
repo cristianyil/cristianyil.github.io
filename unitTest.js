@@ -28,13 +28,7 @@ console.log("---- Password ----")
 console.log("123456789Cr? | 123456789Cr?: " + checkPasswordValidation("123456789Cr?","123456789Cr?"))
 console.log("123456789Cr? | pollo: " + checkPasswordValidation("123456789Cr?","pollo"))
 console.log("123456789Cr? | : " + checkPasswordValidation("123456789Cr?",""))
-console.log("123456789Cr | 123456789Cr: " + checkPasswordValidation("123456789Cr","123456789Cr"))
-
-console.log("")
-console.log("---- Password ----")
-console.log("123456789Cr? | 123456789Cr?: " + checkPasswordValidation("123456789Cr?","123456789Cr?"))
-console.log("123456789Cr? | pollo: " + checkMail("cristiangmail.com"))
-console.log("cristian@gmail.c: " + checkMail("cristian@gmail.c"))
+console.log("123456789Cr | 123456789Cr: " + checkPasswordValidation("123456789Cr","123456789Cr"))ç
 
 console.log("")
 console.log("---- Country ----")

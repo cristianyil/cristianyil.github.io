@@ -1,4 +1,4 @@
-// Funcion que hace todas las validaciones
+
 function validateForm(event) {
     // Creo un diccionario clave valor para facilitar la lectura de codigo, lo vi aqui https://www.w3schools.com/js/js_objects.asp
     let formData = {
