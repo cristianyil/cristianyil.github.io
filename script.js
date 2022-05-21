@@ -49,36 +49,36 @@ function validateForm(event) {
 function checkPasswordValidation(password, passwordCopy) {
     const isWhitespace = /^(?=.*\s)/;
     if (password.match(isWhitespace)) {
-        return "Password must not contain Whitespaces.";
+        return "en la contraseña los espaciados no son validos ";
     }
 
     const isContainsUppercase = /^(?=.*[A-Z])/;
     if (!password.match(isContainsUppercase)) {
-        return "Password must have at least one Uppercase Character.";
+        return "Necesita una mayuscula en la contraseña.";
     }
 
 
     const isContainsLowercase = /^(?=.*[a-z])/;
     if (!password.match(isContainsLowercase)) {
-        return "Password must have at least one Lowercase Character.";
+        return "Necesita una mayuscula en la contraseña.";
     }
 
 
     const isContainsNumber = /^(?=.*[0-9])/;
     if (!password.match(isContainsNumber)) {
-        return "Password must contain at least one Digit.";
+        return "Necesita un digito en la contraseña..";
     }
 
 
     const isContainsSymbol = /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/;
     if (!password.match(isContainsSymbol)) {
-        return "Password must contain at least one Special Symbol.";
+        return "Necesita un caracter especial en la contraseña.";
     }
 
 
     const isValidLength = /^.{4,15}$/;
     if (!password.match(isValidLength)) {
-        return "Password must be 10-16 Characters Long.";
+        return "la contraseña debe ser mayor de 4 caracteres pero menor que 15 .";
     }
 
     if (password !== passwordCopy) {
