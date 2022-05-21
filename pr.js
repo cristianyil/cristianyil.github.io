@@ -47,7 +47,7 @@ function validateForm(event) {
 
     } else if (!correo.match(correoregex)) {
 
-        error = "correo invlido";
+        error = "correo invalido";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
