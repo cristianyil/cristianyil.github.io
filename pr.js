@@ -26,7 +26,7 @@ function validateForm(event) {
     if (name.length <= 2) {
         error = "Nombre invalido 2 caracteres minimo"
         event.preventDefault();
-        document.getElementById("errorD").innerHTML = error  ;
+        document.getElementById("errorD").innerHTML = error;
 
     } else if (name.length > 15) {
         error = "Nombre invalido 15 caracteres minimos"
@@ -67,20 +67,16 @@ function validateForm(event) {
         error = "las contraseñas no coinciden";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-       
-    }
-  
-    else if (pais==""){
+
+    } else if (pais == "") {
         error = "pon un pais";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    }
-    else if (ciudad==""){
+    } else if (ciudad == "") {
         error = "pon un ciuadad";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    }
-    else if( naci=="" ){
+    } else if (naci == "") {
         error = "Porfavor introduzca la edad";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
@@ -88,8 +84,7 @@ function validateForm(event) {
         error = "la fecha no puede ser futura";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
-    } 
-    else if (year - yearn <= 18) {
+    } else if (year - yearn <= 18) {
         if (year - yearn < 18) {
             error = "No cumple la mayoria de edad";
             document.getElementById("errorD").innerHTML = error;
@@ -108,9 +103,26 @@ function validateForm(event) {
             document.getElementById("errorD").innerHTML = error;
             event.preventDefault();
         }
-    } else if (year - yearn > 65) {
-        error = "No puede tener mas de 65 años";
-        document.getElementById("errorD").innerHTML = error;
-        event.preventDefault();
+    } else if (year - yearn <= 66) {
+        if (year - yearn < 66) {
+
+        } else if (monthn >= month) {
+            if (monthn == month) {
+                if (dayn <= day) {
+                    error = "No puede tener mas de 65 años";
+                    document.getElementById("errorD").innerHTML = error;
+                    event.preventDefault();
+                }
+
+            } else {
+                error = "No puede tener mas de 65 años";
+                document.getElementById("errorD").innerHTML = error;
+                event.preventDefault();
+            }
+        } else {
+            error = "No puede tener mas de 65 años";
+            document.getElementById("errorD").innerHTML = error;
+            event.preventDefault();
+        }
     }
 }
