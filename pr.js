@@ -51,15 +51,7 @@ function validateForm(event) {
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
 
-    } else if (co1.length > 15) {
-        error = "la contraseña no puede ser mayor de 15 caracteres ";
-        document.getElementById("errorD").innerHTML = error;
-        event.preventDefault();
-    } else if (co1.length < 2) {
-        error = "la contraseña no puede tener menos de 2 caracteres";
-        document.getElementById("errorD").innerHTML = error;
-        event.preventDefault();
-    } else if (!co1.match(passregex)) {
+    }else if (!co1.match(passregex)) {
         error = "Debe incluir almenos una mayuscula,una minuscula y un caracater ";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
