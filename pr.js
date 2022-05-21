@@ -108,7 +108,7 @@ function validateForm(event) {
             document.getElementById("errorD").innerHTML = error;
             event.preventDefault();
         }
-    } else if (year - yearn >= 65) {
+    } else if (year - yearn > 65) {
         error = "No puede tener mas de 65 años";
         document.getElementById("errorD").innerHTML = error;
         event.preventDefault();
