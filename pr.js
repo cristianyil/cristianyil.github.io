@@ -114,11 +114,7 @@ function validateForm(event) {
                     event.preventDefault();
                 }
 
-            } else {
-                error = "No puede tener mas de 65 años";
-                document.getElementById("errorD").innerHTML = error;
-                event.preventDefault();
-            }
+            } 
         } else {
             error = "No puede tener mas de 65 años";
             document.getElementById("errorD").innerHTML = error;
