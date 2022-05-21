@@ -21,7 +21,7 @@ function validateForm(event) {
     let error = "";
     let namRegex = "^[A-Za-z]+$";
     let correoregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    let passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/;
+    let passregex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{2,15})";
 
     if (name.length <= 2) {
         error = "Nombre invalido 2 caracteres minimo"
